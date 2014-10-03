@@ -1,3 +1,5 @@
+;(function(root){
+
 var charmap = {
     ' ': " ",
     '¡': "!",
@@ -235,4 +237,7 @@ var _slugify = function(s) {
     return s.replace(/[-\s]+/g, "-");
 }
 
-module.exports = _slugify;
+//module.exports = _slugify;
+root.slugify = _slugify;
+
+})(this);
